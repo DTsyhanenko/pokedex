@@ -1,0 +1,58 @@
+@import './variables';
+@import './resets';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap');
+
+@mixin shadow {
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+
+h1 {
+    letter-spacing: 3px;
+}
+
+.poke-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.pokemon {
+    background-color: #eee;
+    border-radius: 10px;
+    @include shadow;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+
+    .info {
+        margin-top: 20px;
+
+        & .number {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8em;
+        }
+
+        & .name {
+            margin: 15px 0 7px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .img-container {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+
+        & img {
+            max-width: 90%;
+            margin-top: 20px;
+        }
+    }
+}
